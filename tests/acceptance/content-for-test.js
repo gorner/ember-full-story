@@ -46,5 +46,9 @@ module('Acceptance | content for', function(hooks) {
       head.includes(`window['_fs_namespace'] = 'testNamespace';`),
       'includes namespace value'
     );
+    assert.ok(
+      head.includes(`window['_fs_is_outer_script'] = true;`),
+      'includes runInIframe value'
+    );
   });
 });
